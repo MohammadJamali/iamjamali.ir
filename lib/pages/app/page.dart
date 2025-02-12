@@ -1,8 +1,10 @@
 import 'dart:convert';
 import 'dart:math';
+import 'dart:ui';
 
 import 'package:animated_box_decoration/animated_box_decoration.dart';
 import 'package:dynamic_cached_fonts/dynamic_cached_fonts.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -115,22 +117,28 @@ class _AppPageState extends State<AppPage> {
 
   late Future<List<Datasource>> datasourceFuture = generateDatasourceFuture();
   Future<List<Datasource>> generateDatasourceFuture() async {
-    var importantResources = Future.wait([
-      rootBundle.loadString('assets/resume.json'),
-      cache('FontAwesomeSolid', 'assets/assets/font/fa/fa-solid-900.ttf')
-    ]);
-
-    precacheImage(const AssetImage("assets/images/callbg.jpg"), context);
     player.setVolume(0.2);
     player.setAsset('assets/ring.mp3', preload: true);
-    cache('times', 'assets/assets/font/times/regular.ttf');
-    cache('pnazanin', 'assets/assets/font/pnazanin/regular.ttf');
-    cache('MaterialIcons', 'assets/assets/font/material_icons.otf');
-    cache('FontAwesomeBrands', 'assets/assets/font/fa/fa-brands-400.ttf');
-    cache('FontAwesomeRegular', 'assets/assets/font/fa/fa-regular-400.ttf');
+
+    var importantResources = <Future<dynamic>>[
+      rootBundle.loadString('assets/resume.json'),
+    ];
+
+    if (kIsWeb) {
+      importantResources.add(
+        cache('FontAwesomeSolid', 'assets/assets/font/fa/fa-solid-900.ttf'),
+      );
+      precacheImage(const AssetImage("assets/images/callbg.jpg"), context);
+      cache('times', 'assets/assets/font/times/regular.ttf');
+      cache('pnazanin', 'assets/assets/font/pnazanin/regular.ttf');
+      cache('MaterialIcons', 'assets/assets/font/material_icons.otf');
+      cache('FontAwesomeBrands', 'assets/assets/font/fa/fa-brands-400.ttf');
+      cache('FontAwesomeRegular', 'assets/assets/font/fa/fa-regular-400.ttf');
+    }
 
     try {
-      return List.from(json.decode((await importantResources).first))
+      return List.from(
+              json.decode((await Future.wait(importantResources)).first))
           .map((e) => Datasource.fromJson(e))
           .toList();
     } catch (e) {
@@ -207,8 +215,8 @@ class _AppPageState extends State<AppPage> {
                       child: Text(
                         "Developed by Mohammad Jamali",
                         style: theme?.textTheme.bodySmall?.copyWith(
-                          color:
-                              theme?.textTheme.bodySmall?.color?.withValues(alpha:0.2),
+                          color: theme?.textTheme.bodySmall?.color
+                              ?.withValues(alpha: 0.2),
                         ),
                       ),
                     ),
@@ -400,38 +408,66 @@ class _AppPageState extends State<AppPage> {
                       state.themeMode == ThemeMode.dark
                           ? Icons.sunny
                           : FontAwesomeIcons.moon,
-                      color: isPhoneCall ? Colors.white.withValues(alpha: 0.1) : null,
+                      color: isPhoneCall
+                          ? Colors.white.withValues(alpha: 0.1)
+                          : null,
                     ),
                   ),
                 ),
               ),
             ),
             BlocBuilder<AppSettingCubit, AppSetting>(
-              builder: (context, state) => Container(
-                width: height * 0.6,
-                height: height * 0.6,
-                margin: const EdgeInsets.only(
-                  top: 24,
-                  bottom: 16,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(
-                    height,
+              builder: (context, state) {
+                // Get the image URL based on the theme
+                String imageUrl = state.themeMode == ThemeMode.light
+                    ? selectedDatasource!.aboutMe.lightProfilePic
+                    : selectedDatasource!.aboutMe.darkProfilePic;
+
+                return Container(
+                  width: height * 0.6,
+                  height: height * 0.6,
+                  margin: const EdgeInsets.only(
+                    top: 24,
+                    bottom: 16,
                   ),
-                  border: Border.all(
-                    color: Colors.white,
-                    width: 2,
-                  ),
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      state.themeMode == ThemeMode.light
-                          ? selectedDatasource!.aboutMe.lightProfilePic
-                          : selectedDatasource!.aboutMe.darkProfilePic,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                      height,
                     ),
-                    fit: BoxFit.contain,
+                    border: Border.all(
+                      color: Colors.white,
+                      width: 2,
+                    ),
                   ),
-                ),
-              ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(height),
+                    child: Image.network(
+                      imageUrl,
+                      fit: BoxFit.cover,
+                      loadingBuilder: (BuildContext context, Widget child,
+                          ImageChunkEvent? loadingProgress) {
+                        if (loadingProgress == null) {
+                          return child; // Image is loaded
+                        } else {
+                          return Center(
+                            child: CircularProgressIndicator(
+                              value: loadingProgress.expectedTotalBytes != null
+                                  ? loadingProgress.cumulativeBytesLoaded /
+                                      (loadingProgress.expectedTotalBytes ?? 1)
+                                  : null,
+                            ),
+                          );
+                        }
+                      },
+                      errorBuilder: (context, error, stackTrace) {
+                        return Center(
+                          child: Icon(Icons.error, color: Colors.red),
+                        ); // Show error icon if the image fails to load
+                      },
+                    ),
+                  ),
+                );
+              },
             ),
             FlagButton(languages: languages),
           ],
@@ -518,7 +554,9 @@ class FlagButton extends StatelessWidget {
                                           SnackBar(
                                             elevation: 6.0,
                                             content: Text(
-                                              lookupAppLocalizations(Locale('en')).languageChanged,
+                                              lookupAppLocalizations(
+                                                      Locale('en'))
+                                                  .languageChanged,
                                               style: TextStyle(
                                                 color: state.themeMode ==
                                                         ThemeMode.light
@@ -550,7 +588,9 @@ class FlagButton extends StatelessWidget {
                                           SnackBar(
                                             elevation: 6.0,
                                             content: Text(
-                                              lookupAppLocalizations(Locale('fa')).languageChanged,
+                                              lookupAppLocalizations(
+                                                      Locale('fa'))
+                                                  .languageChanged,
                                               style: TextStyle(
                                                   color: state.themeMode ==
                                                           ThemeMode.light
@@ -578,17 +618,19 @@ class FlagButton extends StatelessWidget {
                           elevation: 2,
                         ),
                       ),
-                      // transitionBuilder: (ctx, anim1, anim2, Widget tbChild) =>
-                      //     FadeTransition(
-                      //   opacity: anim1,
-                      //   child: BackdropFilter(
-                      //     filter: ImageFilter.blur(
-                      //       sigmaX: 4,
-                      //       sigmaY: 4,
-                      //     ),
-                      //     child: tbChild,
-                      //   ),
-                      // ),
+                      transitionBuilder: !kIsWeb
+                          ? (ctx, anim1, anim2, Widget tbChild) =>
+                              FadeTransition(
+                                opacity: anim1,
+                                child: BackdropFilter(
+                                  filter: ImageFilter.blur(
+                                    sigmaX: 4,
+                                    sigmaY: 4,
+                                  ),
+                                  child: tbChild,
+                                ),
+                              )
+                          : null,
                       context: context,
                     );
                   }
@@ -604,7 +646,8 @@ class FlagButton extends StatelessWidget {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: countryIcons[state.locale ?? 'en'] as ImageProvider<Object>,
+                    image: countryIcons[state.locale ?? 'en']
+                        as ImageProvider<Object>,
                     fit: BoxFit.cover,
                   ),
                 ),

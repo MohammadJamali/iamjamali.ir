@@ -2,11 +2,23 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// import 'package:just_audio_media_kit/just_audio_media_kit.dart';
+import 'package:media_kit/media_kit.dart';
 import 'package:portfolio/pages/app/page.dart';
 import 'package:portfolio/pages/detail_page.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  MediaKit.ensureInitialized();
+  // JustAudioMediaKit.ensureInitialized(
+  //   android: Platform.isAndroid,
+  //   windows: Platform.isWindows,
+  //   linux: Platform.isLinux, // sudo apt install libmpv-dev mpv
+  //   iOS: Platform.isIOS,
+  //   macOS: Platform.isMacOS,
+  // );
+  
   usePathUrlStrategy();
   runApp(const MyApp());
 }
@@ -143,10 +155,7 @@ class _MyAppPageState extends State<MyAppPage> {
         return AppLocalizations.of(context)!.title;
       },
       localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: const [
-        Locale('en'),
-        Locale('fa'),
-      ],
+      supportedLocales: AppLocalizations.supportedLocales,
       locale: getLocal(setting.locale),
       onGenerateRoute: (RouteSettings route) {
         var uri = Uri.tryParse(route.name!);
@@ -194,7 +203,7 @@ class _MyAppPageState extends State<MyAppPage> {
 
         ThemeData theme;
         if (setting.themeMode == ThemeMode.dark) {
-          theme = ThemeData.dark();
+          theme = ThemeData.dark(useMaterial3: false);
           theme = theme.copyWith(
             textTheme: theme.textTheme.apply(
               fontFamily: fontFamily,
@@ -202,7 +211,7 @@ class _MyAppPageState extends State<MyAppPage> {
             ),
           );
         } else {
-          theme = ThemeData.light();
+          theme = ThemeData.light(useMaterial3: false);
           theme = theme.copyWith(
             tabBarTheme: const TabBarTheme(
               labelColor: Colors.blue,

@@ -3,8 +3,8 @@
     "language": "en",
     "supportDeveloper": true,
     "aboutMe": {
-      "lightProfilePic": "assets/images/profile.jpg",
-      "darkProfilePic": "assets/images/profile.jpg",
+      "lightProfilePic": "https://iamjamali.ir/assets/images/profile.jpg",
+      "darkProfilePic": "https://iamjamali.ir/assets/images/profile.jpg",
       "fullname": "Mohammad Jamali",
       "slogan": "Full-Stack Developer (Flutter && Entity Framework Core)",
       "biography": "Self-motivated with 8 years of experience in software engineering and 2 years in Flutter development. Creative, detail-oriented, and can make use of different frameworks and technologies. Learning from, collaborating with, and managing team members and improving their abilities are my favorite everyday tasks.",
@@ -167,7 +167,7 @@
           "publishedDate": "2022-05-22T11:43:07",
           "iconCode": 62010,
           "iconClass": "IconDataBrands",
-          "imgUrl": "assets/images/blogs/instagram.png",
+          "imgUrl": "https://iamjamali.ir/assets/images/blogs/instagram.png",
           "description": "Using the power of python and Photoshop to create dynamic ads for Instagram users to address the challenge of getting lost in the flooded data all over the place.",
           "externalLink": "https://medium.com/@mohammadjamalid/dynamic-ads-generator-based-on-target-customers-6876cdfa580d"
         },
@@ -176,7 +176,7 @@
           "publishedDate": "2022-05-22T11:43:07",
           "iconCode": 62010,
           "iconClass": "IconDataBrands",
-          "imgUrl": "assets/images/blogs/terminal.png",
+          "imgUrl": "https://iamjamali.ir/assets/images/blogs/terminal.png",
           "description": "You may want to download a file in parallel using curl when wget or aria2 are not available. what should you do? For the sake of clarity, let us declare some variables as follow: $url and $path are required but split, rate, and retry can also be specified in our script arguments.",
           "externalLink": "https://medium.com/@mohammadjamalid/downloading-a-file-using-multiple-curl-connections-36e12e058a97?source=rss-ad4d7ecfd494------2"
         }
@@ -186,7 +186,7 @@
       {
         "iconCode": 61445,
         "color": 4294961979,
-        "image": "assets/images/timeline/walltist.jpg",
+        "image": "https://iamjamali.ir/assets/images/timeline/walltist.jpg",
         "iconClass": "IconDataSolid",
         "title": "Project Manager && Full-stack Developer",
         "subtitle": "Walltist",
@@ -202,7 +202,7 @@
         "description": "I developed a stock market crawler and analyzer for `codal.ir` website that was the baseline of the Meshkat investment company's decisions."
       },
       {
-        "image": "assets/images/timeline/mabna.jpg",
+        "image": "https://iamjamali.ir/assets/images/timeline/mabna.jpg",
         "title": "Android Developer",
         "subtitle": "Mabna",
         "description": "I was responsible for developing two android applications. one for video sharing (VOD) and one for a house booking system like Airbnb.",
@@ -211,7 +211,7 @@
         "externalLink": "https://mabna.com"
       },
       {
-        "image": "assets/images/timeline/isiri.jpg",
+        "image": "https://iamjamali.ir/assets/images/timeline/isiri.jpg",
         "title": "Information Technology Administrator",
         "subtitle": "Institute of Standards and Industrial Research of Iran",
         "description": "As a sysadmin, I was responsible for the upkeep, configuration, and reliable operation of clients and servers of the Hamedan branch office.",
@@ -227,7 +227,7 @@
         "description": "As a freelancer developer, I developed a lot of projects using c# and python for many employers."
       },
       {
-        "image": "assets/images/timeline/basu.jpg",
+        "image": "https://iamjamali.ir/assets/images/timeline/basu.jpg",
         "title": "Master's Degree, Artificial Intelligence",
         "subtitle": "Bu-Ali Sina University",
         "description": "Graduated #1 in the class, Thesis: An intelligent recommender system based on machine learning techniques.",
@@ -237,7 +237,7 @@
         "externalLink": "https://basu.ac.ir/en/home"
       },
       {
-        "image": "assets/images/timeline/basu.jpg",
+        "image": "https://iamjamali.ir/assets/images/timeline/basu.jpg",
         "title": "Bachelor's Degree, Software Engineering",
         "subtitle": "Bu-Ali Sina University",
         "description": "Graduated #1 in the class",
@@ -260,8 +260,8 @@
     "language": "fa",
     "supportDeveloper": true,
     "aboutMe": {
-      "lightProfilePic": "assets/images/profile.jpg",
-      "darkProfilePic": "assets/images/profile.jpg",
+      "lightProfilePic": "https://iamjamali.ir/assets/images/profile.jpg",
+      "darkProfilePic": "https://iamjamali.ir/assets/images/profile.jpg",
       "fullname": "محمد جمالی",
       "slogan": "توسعه دهنده فلاتر و EF Core",
       "biography": "برنامه نویس فلاتر با ۲ سال سابقه کار در این حوزه‌ و ۸ سال سابقه برنامه نویسی کامپیوتر، خلاق، دقیق و توانا در به کار گیری زیرساخت ها و فریم ورک های مختلف جهت استفاده از نقاط قوت هر تکنولوژی در یک سیستم یکپارچه. در یک کار تیمی، یادگیری، تعامل، مدیریت و کمک به بهبود عملکرد اعضای تیم از جمله فعالیت های مورد علاقه روزانه هستند.",
@@ -424,7 +424,7 @@
           "publishedDate": "2022-05-22T11:43:07",
           "iconCode": 62010,
           "iconClass": "IconDataBrands",
-          "imgUrl": "assets/images/blogs/instagram.png",
+          "imgUrl": "https://iamjamali.ir/assets/images/blogs/instagram.png",
           "description": "استفاده از قدرت پایتون و فتوشاپ برای ایجاد تبلیغات پویا برای کاربران اینستاگرام برای حل مشکل گم شدن در سیل عظیم داده ها و تبلیغات",
           "externalLink": "https://medium.com/@mohammadjamalid/dynamic-ads-generator-based-on-target-customers-6876cdfa580d"
         },
@@ -433,7 +433,7 @@
           "publishedDate": "2022-05-22T11:43:07",
           "iconCode": 62010,
           "iconClass": "IconDataBrands",
-          "imgUrl": "assets/images/blogs/terminal.png",
+          "imgUrl": "https://iamjamali.ir/assets/images/blogs/terminal.png",
           "description": "زمانی که wget یا aria2 در دسترس نیستند، ممکن است بخواهید یک فایل را به صورت موازی با استفاده از curl دانلود کنید. چه کاری باید انجام دهید؟ برای شفافیت بیشتر، اجازه دهید برخی از متغیرها را به صورت زیر مشخص کنیم",
           "externalLink": "https://medium.com/@mohammadjamalid/downloading-a-file-using-multiple-curl-connections-36e12e058a97?source=rss-ad4d7ecfd494------2"
         }
@@ -443,7 +443,7 @@
       {
         "iconCode": 61445,
         "color": 4294961979,
-        "image": "assets/images/timeline/walltist.jpg",
+        "image": "https://iamjamali.ir/assets/images/timeline/walltist.jpg",
         "iconClass": "IconDataSolid",
         "title": "مدیر پروژه و توسعه دهنده",
         "subtitle": "Walltist",
@@ -460,7 +460,7 @@
         "externalLink": "https://codal.ir"
       },
       {
-        "image": "assets/images/timeline/mabna.jpg",
+        "image": "https://iamjamali.ir/assets/images/timeline/mabna.jpg",
         "title": "توسعه دهنده اندروید",
         "subtitle": "مبنا",
         "description": "یک اپلیکیشن اشتراک ویدیو و یک اپلیکیشن اجاره ویلا برای شرکت توسعه داده شد",
@@ -469,7 +469,7 @@
         "externalLink": "https://mabna.com"
       },
       {
-        "image": "assets/images/timeline/isiri.jpg",
+        "image": "https://iamjamali.ir/assets/images/timeline/isiri.jpg",
         "title": "کارشناس واحد فناوری اطلاعات و ارتباطات",
         "subtitle": "اداره کل استاندارد استان همدان",
         "description": "به عنوان مدیر سیستم مسئولیت نگهداری، پیکربندی و اطمینان از عملکرد مناسب کامپیوتر همکاران و سرورهای شعبه همدان را بر عهده داشتم.",
@@ -485,7 +485,7 @@
         "description": "برای مدت طولانی به عنوان فریلنسر پروژه های متعددی با سی شارپ و پایتون برای کارفرما های مختلف انجام داده ام"
       },
       {
-        "image": "assets/images/timeline/basu.jpg",
+        "image": "https://iamjamali.ir/assets/images/timeline/basu.jpg",
         "title": "کارشناسی ارشد هوش مصنوعی",
         "subtitle": "دانشگاه بوعلی سینا همدان",
         "description": "موضوع پایان نامه: یک سیستم توصیه گر هوشمند مبتنی بر تکنیک های یادگیری ماشین",
@@ -495,7 +495,7 @@
         "externalLink": "https://basu.ac.ir"
       },
       {
-        "image": "assets/images/timeline/basu.jpg",
+        "image": "https://iamjamali.ir/assets/images/timeline/basu.jpg",
         "title": "Bachelor's Degree, Software Engineering",
         "subtitle": "دانشگاه بوعلی سینا همدان",
         "description": "فارغ التحصیل با رتبه یک در کلاس",
