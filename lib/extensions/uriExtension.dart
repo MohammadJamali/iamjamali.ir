@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/extensions/stringExtension.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -13,23 +16,24 @@ extension UriExtension on Uri {
 
     canLaunchUrl(this).then(
       (can) {
-        if (can) {
-          launchUrl(this).then(
-            (successful) {
-              if (successful == true) return;
-              copyOnError?.copyToClipboard();
-              if (context != null) errorMsg.showSnackBar(context);
-            },
-          ).onError(
-            (error, stackTrace) {
-              copyOnError?.copyToClipboard();
-              if (context != null) errorMsg.showSnackBar(context);
-            },
-          );
-        } else {
+        if (kIsWeb && !can) {
           copyOnError?.copyToClipboard();
           if (context != null) errorMsg.showSnackBar(context);
-        }
+          return;
+        } 
+
+        launchUrl(this).then(
+          (successful) {
+            if (successful == true) return;
+            copyOnError?.copyToClipboard();
+            if (context != null) errorMsg.showSnackBar(context);
+          },
+        ).onError(
+          (error, stackTrace) {
+            copyOnError?.copyToClipboard();
+            if (context != null) errorMsg.showSnackBar(context);
+          },
+        );
       },
     ).onError(
       (error, stackTrace) {
@@ -45,34 +49,35 @@ extension StringUriExtension on String {
     String? copyOnError,
     BuildContext? context,
   ]) {
-    var errorMsg =
-        "I can not launch the link, So i copied it into your clipboard";
+    const errorMsg =
+        "I cannot launch the link, so I've copied it into your clipboard.";
 
+    // Helper function to handle error and display a snack bar
+    FutureOr<Null> handleError([Exception? e]) {
+      if (copyOnError != null) {
+        copyOnError.copyToClipboard();
+      }
+      if (context != null) {
+        errorMsg.showSnackBar(context);
+      }
+    }
+
+    // Try to launch the URL
     canLaunchUrlString(this).then(
-      (can) {
-        if (can) {
-          launchUrlString(this).then(
-            (successful) {
-              if (successful == true) return;
-              copyOnError?.copyToClipboard();
-              if (context != null) errorMsg.showSnackBar(context);
-            },
-          ).onError(
-            (error, stackTrace) {
-              copyOnError?.copyToClipboard();
-              if (context != null) errorMsg.showSnackBar(context);
-            },
-          );
-        } else {
-          copyOnError?.copyToClipboard();
-          if (context != null) errorMsg.showSnackBar(context);
+      (canLaunch) {
+        if (kIsWeb && !canLaunch) {
+          handleError();
+          return;
         }
+        
+        launchUrlString(this).then(
+          (success) {
+            if (!success) {
+              handleError();
+            }
+          },
+        ).catchError((_) => handleError());
       },
-    ).onError(
-      (error, stackTrace) {
-        copyOnError?.copyToClipboard();
-        if (context != null) errorMsg.showSnackBar(context);
-      },
-    );
+    ).catchError((_) => handleError()); // Handle if canLaunchUrlString fails
   }
 }

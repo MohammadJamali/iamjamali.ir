@@ -1,7 +1,7 @@
 [
   {
     "language": "en",
-    "supportDeveloper": true,
+    "supportDeveloper": false,
     "aboutMe": {
       "lightProfilePic": "https://iamjamali.ir/assets/images/profile.jpg",
       "darkProfilePic": "https://iamjamali.ir/assets/images/profile.jpg",
@@ -258,7 +258,7 @@
   },
   {
     "language": "fa",
-    "supportDeveloper": true,
+    "supportDeveloper": false,
     "aboutMe": {
       "lightProfilePic": "https://iamjamali.ir/assets/images/profile.jpg",
       "darkProfilePic": "https://iamjamali.ir/assets/images/profile.jpg",
