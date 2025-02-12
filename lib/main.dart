@@ -11,15 +11,15 @@ void main() async {
   runApp(const MyApp());
 }
 
-final supportedLanguages = {
-  'en': {
-    'flag': 'us',
-    'msg': 'Now we are talking the same language!',
-  },
-  'fa': {
-    'flag': 'ir',
-    'msg': 'حالا به یک زبان صحبت می کنیم !',
-  }
+final countryIcons = {
+  'en': AssetImage(
+    'icons/flags/png250px/us.png',
+    package: 'country_icons',
+  ),
+  'fa': AssetImage(
+    'icons/flags/png250px/ir.png',
+    package: 'country_icons',
+  ),
 };
 
 class AppSetting extends Equatable {
@@ -46,18 +46,21 @@ class AppSetting extends Equatable {
 }
 
 class AppSettingCubit extends Cubit<AppSetting> {
-  AppSettingCubit({AppSetting? initialValue})
-      : super(initialValue ??
-            const AppSetting(
-              themeMode: ThemeMode.light,
-            ));
+  AppSettingCubit({
+    AppSetting? initialValue,
+  }) : super(
+          initialValue ??
+              const AppSetting(
+                themeMode: ThemeMode.light,
+              ),
+        );
 
   void setLocale(String lang) {
-    if (supportedLanguages.keys.any((supportedLang) => supportedLang == lang)) {
+    if (countryIcons.keys.any((supportedLang) => supportedLang == lang)) {
       emit(state.copyWith(locale: lang));
       return;
     }
-    emit(state.copyWith(locale: supportedLanguages.keys.first));
+    emit(state.copyWith(locale: countryIcons.keys.first));
   }
 
   void setTheme(ThemeMode mode) {

@@ -1,35 +1,70 @@
 {
-    "title": "Resume website",
-    "hi": "Hi!",
-    "showMore": "Show More",
-    "aboutMe": "About Me",
-    "skills": "My Skills",
-    "phone": "Phone",
-    "sms":"SMS",
-    "email": "Email",
-    "facebook": "Facebook",
-    "instagram": "Instagram",
-    "youTube": "YouTube",
-    "twitch": "Twitch",
-    "skype": "Skype",
-    "twitter": "Twitter",
-    "viber": "Viber",
-    "telegram": "Telegram",
-    "whatsapp": "WhatsApp",
-    "pinterest": "Pinterest",
-    "linkedIn": "LinkedIn",
-    "medium": "Medium",
-    "github": "Github",
-    "gitlab": "Gitlab",
-    "bitbucket": "Bitbucket",
-    "slide": "Slide",
-    "emptyBlog": "My publications are'nt listed here right now",
-    "emptyTimeline": "My activities and experiences are kinda secret",
-    "error": "Sadly, an error occured",
-    "hobbies": "Hobbies",
-    "yearMonth": "{year} Year(s) and {month} month(s)",
-    "years": "{year} Year(s)",
-    "months": "{month} month(s)",
-    "dateUntilDate": "{from} until {to}",
-    "now": "now"
+  "title": "Portfolio",
+  "languageChanged": "Now we are talking the same language!",
+  "hi": "Hi!",
+  "showMore": "Show More",
+  "aboutMe": "About Me",
+  "skills": "My Skills",
+  "phone": "Phone",
+  "sms": "SMS",
+  "email": "Email",
+  "facebook": "Facebook",
+  "instagram": "Instagram",
+  "youTube": "YouTube",
+  "twitch": "Twitch",
+  "skype": "Skype",
+  "twitter": "Twitter",
+  "viber": "Viber",
+  "telegram": "Telegram",
+  "whatsapp": "WhatsApp",
+  "pinterest": "Pinterest",
+  "linkedIn": "LinkedIn",
+  "medium": "Medium",
+  "github": "Github",
+  "gitlab": "Gitlab",
+  "bitbucket": "Bitbucket",
+  "slide": "Slide",
+  "emptyBlog": "My publications are'nt listed here right now",
+  "emptyTimeline": "My activities and experiences are kinda secret",
+  "error": "Sadly, an error occured",
+  "hobbies": "Hobbies",
+  "yearMonth": "{year, plural, =1{1 year} many{{year} years} other{}} and {month, plural, =1{1 month} many{{month} months} other{}}",
+  "@yearMonth": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      },
+      "month": {
+        "type": "int"
+      }
+    }
+  },
+  "years": "{year, plural, =1{1 year} many{{year} years} other{}}",
+  "@years": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "months": "{month, plural, =1{1 month} many{{month} months} other{}}",
+  "@months": {
+    "placeholders": {
+      "month": {
+        "type": "int"
+      }
+    }
+  },
+  "dateUntilDate": "{from} until {to}",
+  "@dateUntilDate": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "now": "now"
 }

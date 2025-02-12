@@ -200,15 +200,15 @@ class _AppPageState extends State<AppPage> {
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: TextButton(
-                      onPressed: () => "https://resume.walltist.com".tryLaunch(
-                        "https://resume.walltist.com",
+                      onPressed: () => "https://iamjamali.ir".tryLaunch(
+                        "https://iamjamali.ir",
                         context,
                       ),
                       child: Text(
                         "Developed by Mohammad Jamali",
                         style: theme?.textTheme.bodySmall?.copyWith(
                           color:
-                              theme?.textTheme.bodySmall?.color?.withOpacity(0.2),
+                              theme?.textTheme.bodySmall?.color?.withValues(alpha:0.2),
                         ),
                       ),
                     ),
@@ -321,7 +321,7 @@ class _AppPageState extends State<AppPage> {
                         TabBar(
                           labelColor: isPhoneCall ? Colors.white : null,
                           unselectedLabelColor: isPhoneCall
-                              ? Colors.white.withOpacity(0.1)
+                              ? Colors.white.withValues(alpha: 0.1)
                               : null,
                           indicator: isPhoneCall
                               ? const UnderlineTabIndicator(
@@ -400,7 +400,7 @@ class _AppPageState extends State<AppPage> {
                       state.themeMode == ThemeMode.dark
                           ? Icons.sunny
                           : FontAwesomeIcons.moon,
-                      color: isPhoneCall ? Colors.white.withOpacity(0.1) : null,
+                      color: isPhoneCall ? Colors.white.withValues(alpha: 0.1) : null,
                     ),
                   ),
                 ),
@@ -518,7 +518,7 @@ class FlagButton extends StatelessWidget {
                                           SnackBar(
                                             elevation: 6.0,
                                             content: Text(
-                                              supportedLanguages['en']!['msg']!,
+                                              lookupAppLocalizations(Locale('en')).languageChanged,
                                               style: TextStyle(
                                                 color: state.themeMode ==
                                                         ThemeMode.light
@@ -550,7 +550,7 @@ class FlagButton extends StatelessWidget {
                                           SnackBar(
                                             elevation: 6.0,
                                             content: Text(
-                                              supportedLanguages['fa']!['msg']!,
+                                              lookupAppLocalizations(Locale('fa')).languageChanged,
                                               style: TextStyle(
                                                   color: state.themeMode ==
                                                           ThemeMode.light
@@ -604,10 +604,7 @@ class FlagButton extends StatelessWidget {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage(
-                      'icons/flags/png/${supportedLanguages[state.locale ?? 'en']!['flag']!}.png',
-                      package: 'country_icons',
-                    ),
+                    image: countryIcons[state.locale ?? 'en'] as ImageProvider<Object>,
                     fit: BoxFit.cover,
                   ),
                 ),

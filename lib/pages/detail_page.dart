@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_quill/flutter_quill.dart'
-    show Document, QuillController, QuillEditor;
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+    show Document, QuillController, QuillEditor, QuillEditorConfigurations;
 import 'package:portfolio/extensions/enumExtension.dart';
 import 'package:portfolio/main.dart' show AppSetting, AppSettingCubit;
 import 'package:portfolio/models/model_detail.dart' show DetailModel;
@@ -98,19 +97,7 @@ class _DetailPageState extends State<DetailPage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox.square(
-                        dimension: 32,
-                        child: TextButton(
-                          onPressed: Navigator.of(context).pop,
-                          child: Icon(
-                            directionality == TextDirection.ltr
-                                ? FontAwesomeIcons.angleLeft
-                                : FontAwesomeIcons.angleRight,
-                            size: 24,
-                            color: theme?.colorScheme.secondary,
-                          ),
-                        ),
-                      ),
+                      BackButton(),
                       const Padding(
                         padding: EdgeInsets.only(left: 16),
                       ),
@@ -171,15 +158,17 @@ class _DetailPageState extends State<DetailPage> {
                         controller: QuillController(
                           document: Document.fromJson(model!.model.document),
                           selection: const TextSelection.collapsed(offset: 0),
+                          readOnly: true,
+                        ),
+                        configurations: QuillEditorConfigurations(
+                          scrollable: false,
+                          autoFocus: true,
+                          expands: false,
+                          padding: EdgeInsets.zero,
+                          showCursor: false,
                         ),
                         scrollController: scrollController,
-                        scrollable: false,
                         focusNode: focusNode,
-                        autoFocus: true,
-                        readOnly: true,
-                        expands: false,
-                        padding: EdgeInsets.zero,
-                        showCursor: false,
                       ),
                     ),
                   ),

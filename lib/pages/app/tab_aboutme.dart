@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/extensions/enumExtension.dart';
 import 'package:portfolio/main.dart';
 import 'package:portfolio/models/model_aboutme.dart';

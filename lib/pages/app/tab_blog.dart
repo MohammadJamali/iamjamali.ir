@@ -12,8 +12,6 @@ import 'package:portfolio/models/model_blog.dart';
 import 'package:portfolio/models/model_bog_post.dart';
 import 'package:portfolio/models/enum_icon_class.dart';
 import 'package:portfolio/pages/detail_page.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 import 'package:xml/xml.dart';
 
 class Blog extends StatefulWidget {

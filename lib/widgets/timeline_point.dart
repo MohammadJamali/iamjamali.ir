@@ -4,7 +4,6 @@ import 'package:intl/intl.dart' show DateFormat;
 import 'package:portfolio/extensions/enumExtension.dart';
 import 'package:portfolio/extensions/uriExtension.dart';
 import 'package:portfolio/main.dart';
-import 'package:portfolio/models/enum_icon_class.dart';
 import 'package:portfolio/models/model_timeline.dart';
 import 'package:portfolio/pages/detail_page.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -51,14 +50,12 @@ class _TimelinePointState extends State<TimelinePoint> {
 
     if (years > 0) {
       if (months > 0) {
-        return localizations!.yearMonth
-            .replaceFirst('{0}', '$years')
-            .replaceFirst('{1}', '$months');
+        return localizations!.yearMonth(years, months);
       }
-      return localizations!.years.replaceFirst('{0}', '$years');
+      return localizations!.years(years);
     }
 
-    return localizations!.months.replaceFirst('{0}', '$months');
+    return localizations!.months(months);
   }
 
   String dateRange() {
@@ -98,9 +95,7 @@ class _TimelinePointState extends State<TimelinePoint> {
         }
       }
     }
-    return localizations!.dateUntilDate
-        .replaceFirst('{0}', startAtStr)
-        .replaceFirst('{1}', finishedAtStr ?? localizations!.now);
+    return localizations!.dateUntilDate(startAtStr, finishedAtStr ?? localizations!.now);
   }
 
   @override

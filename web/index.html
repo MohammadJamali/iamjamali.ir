@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Here you can find the most important things about me! links to my projects, some geeky blog posts and my Contact information if you need them!">
+  <meta name="description"
+    content="Here you can find the most important things about me! links to my projects, some geeky blog posts and my Contact information if you need them!">
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Mohammad Jamali's Portfolio">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-status-bar-style" content="black">
+  <meta name="mobile-web-app-title" content="Mohammad Jamali's Portfolio">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <style type="text/css">
@@ -50,6 +51,7 @@
         left: -100%;
         width: 100%;
       }
+
       100% {
         left: 100%;
         width: 10%;
@@ -61,6 +63,7 @@
         left: -150%;
         width: 100%;
       }
+
       100% {
         left: 100%;
         width: 10%;
@@ -69,7 +72,7 @@
   </style>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>Portfolio</title>
   <link rel="manifest" href="manifest.json">
@@ -82,25 +85,26 @@
   <script>
     // The value below is injected by flutter build, do not touch.
     var serviceWorkerVersion = null;
+    {{flutter_js}}
+    {{flutter_build_config}}
   </script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
+   
 </head>
+
 <body>
-  <div class="flutter-loader"><div class="indeterminate"></div></div>
+  <div class="flutter-loader">
+    <div class="indeterminate"></div>
+  </div>
   <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
+    window.addEventListener('load', function (ev) {
+      _flutter.loader.load({
+        onEntrypointLoaded: async function (engineInitializer) {
+          const appRunner = await engineInitializer.initializeEngine();
+          await appRunner.runApp();
         }
-      }).then(function(engineInitializer) {
-        return engineInitializer.initializeEngine();
-      }).then(function(appRunner) {
-        return appRunner.runApp();
       });
     });
   </script>
 </body>
+
 </html>

@@ -7,34 +7,34 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.0 <3.0.0'
+  sdk: ^3.6.1
 
 dependencies:
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
 
   xml: ^6.1.0
   http: ^1.2.2
   html: ^0.15.0
   intl: ^0.19.0
-  bloc: ^8.1.0
+  bloc: ^9.0.0
   just_audio: ^0.9.29
   shamsi_date: ^1.0.1
   equatable: ^2.0.3
-  flutter_bloc: ^8.1.1
+  flutter_bloc: ^9.0.0
   url_launcher: ^6.1.6
   country_icons: ^3.0.0
+  flutter_svg: ^2.0.17
   flutter_quill: ^10.8.5
   enum_to_string: ^2.0.1
   json_annotation: ^4.7.0
   dynamic_cached_fonts: ^1.0.0
   animated_box_decoration: ^0.0.5
 
-  font_awesome_flutter:
-
-dependency_overrides:
   font_awesome_flutter:
     path: dependencies/font_awesome_flutter
 
@@ -64,15 +64,3 @@ flutter:
     - assets/font/fa/fa-brands-400.ttf
     - assets/font/fa/fa-regular-400.ttf
     - assets/font/fa/fa-solid-900.ttf
-
-  # fonts:
-  #   - family: times_new_roman
-  #     fonts:
-  #       - asset: assets/font/TimesNewRoman/times_new_roman.ttf
-  #         style: normal
-  #   - family: IRANSans
-  #     fonts:
-  #       - asset: assets/font/iransans/ttf/IRANSansWeb_FaNum_Medium.ttf
-  #         style: normal
-  #       - asset: assets/font/iransans/ttf/IRANSansWeb_FaNum_Bold.ttf
-  #         weight: 700
