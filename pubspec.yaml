@@ -20,10 +20,10 @@ dependencies:
   xml: ^6.1.0
   http: ^1.2.2
   html: ^0.15.0
-  intl: ^0.19.0
+  intl: ^0.20.2
   bloc: ^9.0.0
   
-  just_audio: ^0.9.29
+  just_audio: ^0.10.3
   media_kit: ^1.1.11
   media_kit_libs_audio: ^1.0.5
   media_kit_libs_linux: any
@@ -35,7 +35,7 @@ dependencies:
   url_launcher: ^6.1.6
   country_icons: ^3.0.0
   flutter_svg: ^2.0.17
-  flutter_quill: ^10.8.5
+  flutter_quill: ^11.4.1
   enum_to_string: ^2.0.1
   json_annotation: ^4.7.0
   dynamic_cached_fonts: ^1.0.0

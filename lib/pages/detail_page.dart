@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_quill/flutter_quill.dart'
-    show Document, QuillController, QuillEditor, QuillEditorConfigurations;
+    show Document, QuillController, QuillEditor, QuillEditorConfig;
 import 'package:portfolio/extensions/enumExtension.dart';
 import 'package:portfolio/main.dart' show AppSetting, AppSettingCubit;
 import 'package:portfolio/models/model_detail.dart' show DetailModel;
@@ -160,7 +160,7 @@ class _DetailPageState extends State<DetailPage> {
                           selection: const TextSelection.collapsed(offset: 0),
                           readOnly: true,
                         ),
-                        configurations: QuillEditorConfigurations(
+                        config: QuillEditorConfig(
                           scrollable: false,
                           autoFocus: true,
                           expands: false,

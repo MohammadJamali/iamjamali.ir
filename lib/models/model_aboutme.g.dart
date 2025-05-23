@@ -15,7 +15,7 @@ AboutMeModel _$AboutMeModelFromJson(Map<String, dynamic> json) => AboutMeModel(
       skills: (json['skills'] as List<dynamic>?)
           ?.map((e) => TagModel.fromJson(e as Map<String, dynamic>))
           .toList(),
-      topSkills: json['topSkills'] as int? ?? 5,
+      topSkills: (json['topSkills'] as num?)?.toInt() ?? 5,
       hobbies: (json['hobbies'] as List<dynamic>?)
           ?.map((e) => HobbyModel.fromJson(e as Map<String, dynamic>))
           .toList(),

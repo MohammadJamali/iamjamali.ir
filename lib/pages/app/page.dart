@@ -6,7 +6,6 @@ import 'package:animated_box_decoration/animated_box_decoration.dart';
 import 'package:dynamic_cached_fonts/dynamic_cached_fonts.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:just_audio/just_audio.dart';
@@ -283,7 +282,7 @@ class _AppPageState extends State<AppPage> {
                           ),
                         );
                       }
-      
+
                       if (snapshot.hasError) {
                         return SizedBox(
                           height: 400,
@@ -292,13 +291,13 @@ class _AppPageState extends State<AppPage> {
                           ),
                         );
                       }
-      
+
                       if (tabBoxConstraints == null) {
                         WidgetsBinding.instance.addPostFrameCallback(
                           (_) => _decideBodySize(),
                         );
                       }
-      
+
                       final languages =
                           snapshot.data!.map((e) => e.language).toList();
                       if (selectedDatasource?.language !=
@@ -311,7 +310,7 @@ class _AppPageState extends State<AppPage> {
                             orElse: () => snapshot.data!.first,
                           ),
                         );
-      
+
                         _tabViews = [
                           AboutMe(selectedDatasource!.aboutMe),
                           ScrollableTimeline(selectedDatasource!.timeline),
@@ -320,7 +319,7 @@ class _AppPageState extends State<AppPage> {
                             child: CallScreen(selectedDatasource!.contacts),
                           )
                         ];
-      
+
                         if (languages.length == 1) {
                           context.read<AppSettingCubit>().setLocale(
                                 languages.first,

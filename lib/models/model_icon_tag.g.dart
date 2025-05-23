@@ -9,7 +9,7 @@ part of 'model_icon_tag.dart';
 IconTagModel _$IconTagModelFromJson(Map<String, dynamic> json) => IconTagModel(
       title: json['title'] as String,
       value: json['value'] as String,
-      iconCode: json['iconCode'] as int,
+      iconCode: (json['iconCode'] as num).toInt(),
       iconClass: $enumDecode(_$IconClassEnumMap, json['iconClass']),
     );
 

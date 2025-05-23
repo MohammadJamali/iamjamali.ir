@@ -14,7 +14,7 @@ BlogPostModel _$BlogPostModelFromJson(Map<String, dynamic> json) =>
       detail: json['detail'] == null
           ? null
           : DetailModel.fromJson(json['detail'] as Map<String, dynamic>),
-      iconCode: json['iconCode'] as int?,
+      iconCode: (json['iconCode'] as num?)?.toInt(),
       iconClass: $enumDecodeNullable(_$IconClassEnumMap, json['iconClass']),
       description: json['description'] as String?,
       externalLink: json['externalLink'] as String?,

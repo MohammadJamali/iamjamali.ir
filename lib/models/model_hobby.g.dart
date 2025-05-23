@@ -7,7 +7,7 @@ part of 'model_hobby.dart';
 // **************************************************************************
 
 HobbyModel _$HobbyModelFromJson(Map<String, dynamic> json) => HobbyModel(
-      iconCode: json['iconCode'] as int,
+      iconCode: (json['iconCode'] as num).toInt(),
       iconClass: $enumDecode(_$IconClassEnumMap, json['iconClass']),
       title: json['title'] as String?,
       detail: json['detail'] == null

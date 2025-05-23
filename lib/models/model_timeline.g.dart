@@ -23,8 +23,8 @@ TimelineModel _$TimelineModelFromJson(Map<String, dynamic> json) =>
       detail: json['detail'] == null
           ? null
           : DetailModel.fromJson(json['detail'] as Map<String, dynamic>),
-      color: json['color'] as int?,
-      iconCode: json['iconCode'] as int?,
+      color: (json['color'] as num?)?.toInt(),
+      iconCode: (json['iconCode'] as num?)?.toInt(),
       iconClass: $enumDecodeNullable(_$IconClassEnumMap, json['iconClass']),
     );
 
