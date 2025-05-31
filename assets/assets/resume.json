@@ -1,0 +1,517 @@
+[
+  {
+    "language": "en",
+    "supportDeveloper": false,
+    "aboutMe": {
+      "lightProfilePic": "https://iamjamali.ir/assets/images/profile.jpg",
+      "darkProfilePic": "https://iamjamali.ir/assets/images/profile.jpg",
+      "fullname": "Mohammad Jamali",
+      "slogan": "Full-Stack Developer (Flutter && Entity Framework Core)",
+      "biography": "Self-motivated with 8 years of experience in software engineering and 2 years in Flutter development. Creative, detail-oriented, and can make use of different frameworks and technologies. Learning from, collaborating with, and managing team members and improving their abilities are my favorite everyday tasks.",
+      "skills": [
+        { "tag": "Flutter" },
+        {
+          "tag": "Entity Framework Core"
+        },
+        {
+          "tag": "C#",
+          "detail": {
+            "title": "C#",
+            "tags": [
+              {
+                "title": "Company",
+                "value": "Microsoft",
+                "iconCode": 62410,
+                "iconClass": "IconDataBrands"
+              },
+              {
+                "title": "Environment",
+                "value": "Cross-platform",
+                "iconCode": 61573,
+                "iconClass": "IconDataSolid"
+              },
+              {
+                "title": "Code Editor",
+                "value": "Rider",
+                "iconCode": 61728,
+                "iconClass": "IconDataSolid"
+              }
+            ],
+            "document": [
+              {
+                "insert": "I started programming using c++, after a while switched to C# because it had more use cases in web development and also has a lot of already implemented packages for probably everything ones might need.\n\nAfter doing many hobbies and freelancing projects using C# I start exploring different technologies like QT5 and Unity3D that are using C++/C# as their main language.\n\nOne of the projects I developed using QT5 was a chess game, it was my final project in “advanced programming language” the second semester of my bachelor's degree at Bu-Ali Sina university. "
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/QT-Chess-Game"
+                },
+                "insert": "Here"
+              },
+              {
+                "insert": " you can see the code and the video clip of this project.\n\nYou can check out some of my hobby projects on my GitHub too, here is a list of them:\n\n"
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/Flappy-Bird"
+                },
+                "insert": "flappy bird"
+              },
+              {
+                "attributes": {
+                  "list": "bullet"
+                },
+                "insert": "\n"
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/QT-Chess-Game"
+                },
+                "insert": "chess game"
+              },
+              {
+                "attributes": {
+                  "list": "bullet"
+                },
+                "insert": "\n"
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/MazeMapping"
+                },
+                "insert": "maze mapping"
+              },
+              {
+                "attributes": {
+                  "list": "bullet"
+                },
+                "insert": "\n"
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/Fun-3D-Gamestudio-Project"
+                },
+                "insert": "scary tunnel"
+              },
+              {
+                "attributes": {
+                  "list": "bullet"
+                },
+                "insert": "\n"
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/undergraduate-os-homework-shell/blob/master/Shell.cpp"
+                },
+                "insert": "simple shell"
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/CpuProject/blob/master/CPU%20Project/Source.cpp"
+                },
+                "insert": "operation on one cpu core"
+              },
+              {
+                "attributes": {
+                  "list": "bullet"
+                },
+                "insert": "\n"
+              },
+              {
+                "insert": "\nLast but not least, I want to introduce NG-API, A general-purpose server-side application that will simply do all CRUD + Relation & Search things for models, and makes the server-side application development process super rapid and convenient. This repository is not under maintenance because I don't have time for it but you can see the code "
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/NeutronGeneralAPI"
+                },
+                "insert": "here."
+              },
+              {
+                "insert": "\n\n\n"
+              }
+            ]
+          }
+        },
+        { "tag": "Python" },
+        { "tag": "Android" },
+        { "tag": "SQL" },
+        { "tag": "Git" },
+        { "tag": "JIRA" }
+      ],
+      "hobbies": [
+        {
+          "title": "Linux",
+          "iconCode": 61820,
+          "iconClass": "IconDataBrands"
+        },
+        {
+          "title": "Piano",
+          "iconCode": 58558,
+          "iconClass": "MaterialIcon"
+        },
+        {
+          "title": "Motorcycle",
+          "iconCode": 61980,
+          "iconClass": "IconDataSolid"
+        },
+        {
+          "title": "Game",
+          "iconCode": 62431,
+          "iconClass": "IconDataBrands"
+        }
+      ]
+    },
+    "blog": {
+      "blogPosts": [
+        {
+          "title": "Dynamic Ads Generator Based On Target Customers",
+          "publishedDate": "2022-05-22T11:43:07",
+          "iconCode": 62010,
+          "iconClass": "IconDataBrands",
+          "imgUrl": "https://iamjamali.ir/assets/images/blogs/instagram.png",
+          "description": "Using the power of python and Photoshop to create dynamic ads for Instagram users to address the challenge of getting lost in the flooded data all over the place.",
+          "externalLink": "https://medium.com/@mohammadjamalid/dynamic-ads-generator-based-on-target-customers-6876cdfa580d"
+        },
+        {
+          "title": "Downloading a file using multiple curl connections",
+          "publishedDate": "2022-05-22T11:43:07",
+          "iconCode": 62010,
+          "iconClass": "IconDataBrands",
+          "imgUrl": "https://iamjamali.ir/assets/images/blogs/terminal.png",
+          "description": "You may want to download a file in parallel using curl when wget or aria2 are not available. what should you do? For the sake of clarity, let us declare some variables as follow: $url and $path are required but split, rate, and retry can also be specified in our script arguments.",
+          "externalLink": "https://medium.com/@mohammadjamalid/downloading-a-file-using-multiple-curl-connections-36e12e058a97?source=rss-ad4d7ecfd494------2"
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "iconCode": 61445,
+        "color": 4294961979,
+        "image": "https://iamjamali.ir/assets/images/timeline/walltist.jpg",
+        "iconClass": "IconDataSolid",
+        "title": "Project Manager && Full-stack Developer",
+        "subtitle": "Walltist",
+        "startedAt": "2018-01-01",
+        "externalLink": "https://walltist.com",
+        "description": "I am proud to announce I was the CEO and full-stack developer at Walltist and brought this app to life with love and hard work."
+      },
+      {
+        "title": "Project Manager && Python Developer",
+        "subtitle": "Meshkat",
+        "startedAt": "2020-08-22",
+        "finishedAt": "2022-08-23",
+        "description": "I developed a stock market crawler and analyzer for `codal.ir` website that was the baseline of the Meshkat investment company's decisions."
+      },
+      {
+        "image": "https://iamjamali.ir/assets/images/timeline/mabna.jpg",
+        "title": "Android Developer",
+        "subtitle": "Mabna",
+        "description": "I was responsible for developing two android applications. one for video sharing (VOD) and one for a house booking system like Airbnb.",
+        "startedAt": "2018-06-01",
+        "finishedAt": "2019-01-01",
+        "externalLink": "https://mabna.com"
+      },
+      {
+        "image": "https://iamjamali.ir/assets/images/timeline/isiri.jpg",
+        "title": "Information Technology Administrator",
+        "subtitle": "Institute of Standards and Industrial Research of Iran",
+        "description": "As a sysadmin, I was responsible for the upkeep, configuration, and reliable operation of clients and servers of the Hamedan branch office.",
+        "startedAt": "2020-08-22",
+        "finishedAt": "2022-08-23",
+        "externalLink": "https://inso.gov.ir"
+      },
+      {
+        "title": "C# && Python Developer",
+        "subtitle": "Freelancer",
+        "startedAt": "2015-01-01",
+        "finishedAt": "2020-01-01",
+        "description": "As a freelancer developer, I developed a lot of projects using c# and python for many employers."
+      },
+      {
+        "image": "https://iamjamali.ir/assets/images/timeline/basu.jpg",
+        "title": "Master's Degree, Artificial Intelligence",
+        "subtitle": "Bu-Ali Sina University",
+        "description": "Graduated #1 in the class, Thesis: An intelligent recommender system based on machine learning techniques.",
+        "startedAt": "2017-09-01",
+        "finishedAt": "2019-09-01",
+        "caption": "Score: 17.7/20",
+        "externalLink": "https://basu.ac.ir/en/home"
+      },
+      {
+        "image": "https://iamjamali.ir/assets/images/timeline/basu.jpg",
+        "title": "Bachelor's Degree, Software Engineering",
+        "subtitle": "Bu-Ali Sina University",
+        "description": "Graduated #1 in the class",
+        "startedAt": "2013-09-01",
+        "finishedAt": "2017-09-01",
+        "caption": "Score: 17.7/20",
+        "externalLink": "https://basu.ac.ir/en/home"
+      }
+    ],
+    "contacts": [
+      { "host": "email", "identifier": "mohammadjamalid@gmail.com" },
+      { "host": "telegram", "identifier": "mohammadjamali" },
+      { "host": "instagram", "identifier": "mohammadjamalid" },
+      { "host": "linkedIn", "identifier": "mohammadjamalid" },
+      { "host": "github", "identifier": "mohammadjamali" },
+      { "host": "phone", "identifier": "+980000000000" }
+    ]
+  },
+  {
+    "language": "fa",
+    "supportDeveloper": false,
+    "aboutMe": {
+      "lightProfilePic": "https://iamjamali.ir/assets/images/profile.jpg",
+      "darkProfilePic": "https://iamjamali.ir/assets/images/profile.jpg",
+      "fullname": "محمد جمالی",
+      "slogan": "توسعه دهنده فلاتر و EF Core",
+      "biography": "برنامه نویس فلاتر با ۲ سال سابقه کار در این حوزه‌ و ۸ سال سابقه برنامه نویسی کامپیوتر، خلاق، دقیق و توانا در به کار گیری زیرساخت ها و فریم ورک های مختلف جهت استفاده از نقاط قوت هر تکنولوژی در یک سیستم یکپارچه. در یک کار تیمی، یادگیری، تعامل، مدیریت و کمک به بهبود عملکرد اعضای تیم از جمله فعالیت های مورد علاقه روزانه هستند.",
+      "skills": [
+        { "tag": "فلاتر" },
+        {
+          "tag": "Entity Framework Core"
+        },
+        {
+          "tag": "سی شارپ",
+          "detail": {
+            "title": "سی شارپ",
+            "tags": [
+              {
+                "title": "شرکت",
+                "value": "مایکروسافت",
+                "iconCode": 62410,
+                "iconClass": "IconDataBrands"
+              },
+              {
+                "title": "محیط",
+                "value": "عموم سیستم عامل ها",
+                "iconCode": 61573,
+                "iconClass": "IconDataSolid"
+              },
+              {
+                "title": "ویرایشگر کد",
+                "value": "رایدر",
+                "iconCode": 61728,
+                "iconClass": "IconDataSolid"
+              }
+            ],
+            "document": [
+              {
+                "insert": "برنامه نویسی را با زبان سی شروع کردم و بعد از مدتی به دلیل کاربرد بیشتر و وجود کتابخانه های متعدد آماده در زمینه های مختلف به سی شارپ مهاجرت کردم. \n\nبعد از انجام تعداد زیادی پروژه سرگرمی و پروژه های فریلنسری با زبان سی شارپ شروع به کاوش در تکنولوژی هایی مانند یونیتی و QT5 کردم که از زبان های سی و سی شارپ به عنوان زبان های پایه خود استفاده می کردند. یکی از پروژه هایی که با QT5 توسعه دادم یک بازی شطرنج بود که به عنوان پروژه پایان ترم درس برنامه نویسی پیشرفته ترم دوم دوره کارشناسی دانگشاه بوعلی سینا تحویل دادم "
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/QT-Chess-Game"
+                },
+                "insert": "که می توانید اینجا"
+              },
+              {
+                "insert": " کد و ویدیو کلیپ تهیه شده از بازی را مشاهده کنید.\n\nهمچنین چند مورد از پروژه های تفننی من را در گیت هابم مشاهده کنید:\n\n"
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/Flappy-Bird"
+                },
+                "insert": "فلاپی برد"
+              },
+              {
+                "attributes": {
+                  "list": "bullet"
+                },
+                "insert": "\n"
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/QT-Chess-Game"
+                },
+                "insert": "شطرنج"
+              },
+              {
+                "attributes": {
+                  "list": "bullet"
+                },
+                "insert": "\n"
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/MazeMapping"
+                },
+                "insert": "کاشی کاری"
+              },
+              {
+                "attributes": {
+                  "list": "bullet"
+                },
+                "insert": "\n"
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/Fun-3D-Gamestudio-Project"
+                },
+                "insert": "تونل وحشت"
+              },
+              {
+                "attributes": {
+                  "list": "bullet"
+                },
+                "insert": "\n"
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/undergraduate-os-homework-shell/blob/master/Shell.cpp"
+                },
+                "insert": "شل ساده"
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/CpuProject/blob/master/CPU%20Project/Source.cpp"
+                },
+                "insert": "عملیات با یک هسته پردازشگر"
+              },
+              {
+                "attributes": {
+                  "list": "bullet"
+                },
+                "insert": "\n"
+              },
+              {
+                "insert": "\nآخرین اما نه کم‌اهمیت، می‌خواهم NG-API را معرفی کنم، یک برنامه کاربردی در سمت سرور که به سادگی تمام کارهای CRUD را برای مدل‌ها انجام می‌دهد و فرآیند توسعه سمت سرور را بسیار سریع و راحت می‌کند. این پروژه تحت توسعه نیست زیرا دیگر در بودجه بندی زمانی من جا نمی شود اما کد آن را می توانید "
+              },
+              {
+                "attributes": {
+                  "link": "https://github.com/MohammadJamali/NeutronGeneralAPI"
+                },
+                "insert": "در اینجا مشاهده کنید."
+              },
+              {
+                "insert": "\n\n\n\n"
+              }
+            ]
+          }
+        },
+        { "tag": "پایتون" },
+        { "tag": "اندروید" },
+        { "tag": "SQL" },
+        { "tag": "گیت" },
+        { "tag": "جیرا" }
+      ],
+      "hobbies": [
+        {
+          "title": "لینوکس",
+          "iconCode": 61820,
+          "iconClass": "IconDataBrands"
+        },
+        {
+          "title": "پیانو",
+          "iconCode": 58558,
+          "iconClass": "MaterialIcon"
+        },
+        {
+          "title": "موتور",
+          "iconCode": 61980,
+          "iconClass": "IconDataSolid"
+        },
+        {
+          "title": "بازی",
+          "iconCode": 62431,
+          "iconClass": "IconDataBrands"
+        }
+      ]
+    },
+    "blog": {
+      "blogPosts": [
+        {
+          "title": "تولید تبلیغات پویا بر اساس مشتریان هدف",
+          "publishedDate": "2022-05-22T11:43:07",
+          "iconCode": 62010,
+          "iconClass": "IconDataBrands",
+          "imgUrl": "https://iamjamali.ir/assets/images/blogs/instagram.png",
+          "description": "استفاده از قدرت پایتون و فتوشاپ برای ایجاد تبلیغات پویا برای کاربران اینستاگرام برای حل مشکل گم شدن در سیل عظیم داده ها و تبلیغات",
+          "externalLink": "https://medium.com/@mohammadjamalid/dynamic-ads-generator-based-on-target-customers-6876cdfa580d"
+        },
+        {
+          "title": "دانلود یک فایل با استفاده از چندین اتصال curl",
+          "publishedDate": "2022-05-22T11:43:07",
+          "iconCode": 62010,
+          "iconClass": "IconDataBrands",
+          "imgUrl": "https://iamjamali.ir/assets/images/blogs/terminal.png",
+          "description": "زمانی که wget یا aria2 در دسترس نیستند، ممکن است بخواهید یک فایل را به صورت موازی با استفاده از curl دانلود کنید. چه کاری باید انجام دهید؟ برای شفافیت بیشتر، اجازه دهید برخی از متغیرها را به صورت زیر مشخص کنیم",
+          "externalLink": "https://medium.com/@mohammadjamalid/downloading-a-file-using-multiple-curl-connections-36e12e058a97?source=rss-ad4d7ecfd494------2"
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "iconCode": 61445,
+        "color": 4294961979,
+        "image": "https://iamjamali.ir/assets/images/timeline/walltist.jpg",
+        "iconClass": "IconDataSolid",
+        "title": "مدیر پروژه و توسعه دهنده",
+        "subtitle": "Walltist",
+        "startedAt": "2018-01-01",
+        "externalLink": "https://walltist.com",
+        "description": "به عنوان مدیر پروژه و توسعه دهنده فول استک در والتیست با عشق و سختکوشی به والتیست زندگی بخشیدم"
+      },
+      {
+        "title": "مدیر پروژه و توسعه دهنده پایتون",
+        "subtitle": "مشکات",
+        "startedAt": "2020-08-22",
+        "finishedAt": "2022-08-23",
+        "description": "یک نرم افزار خزنده و تحلیلگر داده های وب سایت کدال توسعه داده شد که به عنوان مرجع اطلاعات در جهت تصمیمات شرکت برای سرمایه گذاری در نظر گرفته می شد",
+        "externalLink": "https://codal.ir"
+      },
+      {
+        "image": "https://iamjamali.ir/assets/images/timeline/mabna.jpg",
+        "title": "توسعه دهنده اندروید",
+        "subtitle": "مبنا",
+        "description": "یک اپلیکیشن اشتراک ویدیو و یک اپلیکیشن اجاره ویلا برای شرکت توسعه داده شد",
+        "startedAt": "2018-06-01",
+        "finishedAt": "2019-01-01",
+        "externalLink": "https://mabna.com"
+      },
+      {
+        "image": "https://iamjamali.ir/assets/images/timeline/isiri.jpg",
+        "title": "کارشناس واحد فناوری اطلاعات و ارتباطات",
+        "subtitle": "اداره کل استاندارد استان همدان",
+        "description": "به عنوان مدیر سیستم مسئولیت نگهداری، پیکربندی و اطمینان از عملکرد مناسب کامپیوتر همکاران و سرورهای شعبه همدان را بر عهده داشتم.",
+        "startedAt": "2020-08-22",
+        "finishedAt": "2022-08-23",
+        "externalLink": "https://inso.gov.ir"
+      },
+      {
+        "title": "فریلنسر",
+        "subtitle": "سی شارپ و پایتون",
+        "startedAt": "2015-01-01",
+        "finishedAt": "2020-01-01",
+        "description": "برای مدت طولانی به عنوان فریلنسر پروژه های متعددی با سی شارپ و پایتون برای کارفرما های مختلف انجام داده ام"
+      },
+      {
+        "image": "https://iamjamali.ir/assets/images/timeline/basu.jpg",
+        "title": "کارشناسی ارشد هوش مصنوعی",
+        "subtitle": "دانشگاه بوعلی سینا همدان",
+        "description": "موضوع پایان نامه: یک سیستم توصیه گر هوشمند مبتنی بر تکنیک های یادگیری ماشین",
+        "startedAt": "2017-09-01",
+        "finishedAt": "2019-09-01",
+        "caption": "معدل ۱۸.۷۷",
+        "externalLink": "https://basu.ac.ir"
+      },
+      {
+        "image": "https://iamjamali.ir/assets/images/timeline/basu.jpg",
+        "title": "Bachelor's Degree, Software Engineering",
+        "subtitle": "دانشگاه بوعلی سینا همدان",
+        "description": "فارغ التحصیل با رتبه یک در کلاس",
+        "startedAt": "2013-09-01",
+        "finishedAt": "2017-09-01",
+        "caption": "معدل ۱۷.۷",
+        "externalLink": "https://basu.ac.ir"
+      }
+    ],
+    "contacts": [
+      { "host": "email", "identifier": "mohammadjamalid@gmail.com" },
+      { "host": "telegram", "identifier": "mohammadjamali" },
+      { "host": "instagram", "identifier": "mohammadjamalid" },
+      { "host": "linkedIn", "identifier": "mohammadjamalid" },
+      { "host": "github", "identifier": "mohammadjamali" },
+      { "host": "phone", "identifier": "+980000000000" }
+    ]
+  }
+]
