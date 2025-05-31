@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:portfolio/l10n/app_localizations.dart';
 import 'package:portfolio/extensions/enumExtension.dart';
 import 'package:portfolio/models/model_contact.dart';
 import 'package:portfolio/models/enum_contact_host.dart';

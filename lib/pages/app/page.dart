@@ -21,7 +21,7 @@ import 'package:portfolio/pages/app/tab_timeline.dart';
 import 'package:portfolio/pages/app/widgets/flag.dart';
 import 'package:portfolio/widgets/ring_vibration.dart';
 import 'package:portfolio/widgets/slide_transition.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:portfolio/l10n/app_localizations.dart';
 
 class TabControllerAppPage extends StatelessWidget {
   const TabControllerAppPage({

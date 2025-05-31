@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:portfolio/l10n/app_localizations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:html/parser.dart' as html_parser;
 import 'package:intl/intl.dart';
@@ -290,8 +290,7 @@ class BlogPostItem extends StatelessWidget {
                         if (model.iconCode != null)
                           Center(
                             child: Icon(
-                              (model.iconClass!)
-                                  .iconData(model.iconCode!),
+                              (model.iconClass!).iconData(model.iconCode!),
                             ),
                           ),
                         if (model.imgUrl != null)

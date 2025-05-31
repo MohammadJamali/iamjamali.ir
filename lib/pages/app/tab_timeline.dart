@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:portfolio/l10n/app_localizations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/models/model_timeline.dart';
 import 'package:portfolio/widgets/timeline_point.dart';
@@ -52,8 +52,7 @@ class _ScrollableTimelineState extends State<ScrollableTimeline> {
                         ),
                       ),
                     )
-                    .values
-                    ,
+                    .values,
                 if (lastItemShowed < widget.model.length)
                   Container(
                     alignment: Alignment.center,

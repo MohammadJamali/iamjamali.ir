@@ -1,9 +1,11 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// import 'package:portfolio/l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 // import 'package:just_audio_media_kit/just_audio_media_kit.dart';
 import 'package:media_kit/media_kit.dart';
+import 'package:portfolio/l10n/app_localizations.dart';
 import 'package:portfolio/pages/app/page.dart';
 import 'package:portfolio/pages/detail_page.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
@@ -18,7 +20,7 @@ void main() async {
   //   iOS: Platform.isIOS,
   //   macOS: Platform.isMacOS,
   // );
-  
+
   usePathUrlStrategy();
   runApp(const MyApp());
 }
@@ -152,9 +154,15 @@ class _MyAppPageState extends State<MyAppPage> {
 
     return MaterialApp(
       onGenerateTitle: (context) {
-        return AppLocalizations.of(context)!.title;
+        final localizations = AppLocalizations.of(context);
+        return localizations!.title;
       },
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
       supportedLocales: AppLocalizations.supportedLocales,
       locale: getLocal(setting.locale),
       onGenerateRoute: (RouteSettings route) {
@@ -213,7 +221,7 @@ class _MyAppPageState extends State<MyAppPage> {
         } else {
           theme = ThemeData.light(useMaterial3: false);
           theme = theme.copyWith(
-            tabBarTheme: const TabBarTheme(
+            tabBarTheme: const TabBarThemeData(
               labelColor: Colors.blue,
               unselectedLabelColor: Colors.black,
               unselectedLabelStyle: TextStyle(color: Colors.black),

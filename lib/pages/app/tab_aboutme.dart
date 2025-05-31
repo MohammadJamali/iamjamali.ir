@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:portfolio/extensions/enumExtension.dart';
 import 'package:portfolio/main.dart';
 import 'package:portfolio/models/model_aboutme.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:portfolio/l10n/app_localizations.dart';
 import 'package:portfolio/models/model_hobby.dart';
 import 'package:portfolio/models/model_tag.dart';
 import 'package:portfolio/pages/detail_page.dart';

@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart' show DateFormat;
 import 'package:portfolio/extensions/enumExtension.dart';
 import 'package:portfolio/extensions/uriExtension.dart';
+import 'package:portfolio/l10n/app_localizations.dart';
 import 'package:portfolio/main.dart';
 import 'package:portfolio/models/model_timeline.dart';
 import 'package:portfolio/pages/detail_page.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:shamsi_date/shamsi_date.dart';
 
 class TimelinePoint extends StatefulWidget {
@@ -95,7 +95,8 @@ class _TimelinePointState extends State<TimelinePoint> {
         }
       }
     }
-    return localizations!.dateUntilDate(startAtStr, finishedAtStr ?? localizations!.now);
+    return localizations!
+        .dateUntilDate(startAtStr, finishedAtStr ?? localizations!.now);
   }
 
   @override

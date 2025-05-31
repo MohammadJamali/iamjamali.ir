@@ -15,8 +15,7 @@ import 'package:portfolio/models/enum_icon_class.dart' show IconClass;
 
 import 'package:flutter/widgets.dart'
     show BuildContext, IconData, MediaQueryData;
-import 'package:flutter_gen/gen_l10n/app_localizations.dart'
-    show AppLocalizations;
+import 'package:portfolio/l10n/app_localizations.dart' show AppLocalizations;
 import 'package:portfolio/models/enum_screen_type.dart';
 
 extension IconClassExtension on IconClass {

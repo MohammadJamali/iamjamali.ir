@@ -3,7 +3,7 @@ import 'package:portfolio/models/model_timeline.dart';
 import 'package:portfolio/widgets/fancy_header.dart';
 import 'package:portfolio/widgets/timeline_point.dart';
 
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:portfolio/l10n/app_localizations.dart';
 
 class FancyTimelinePage extends StatelessWidget {
   const FancyTimelinePage({
@@ -66,8 +66,7 @@ class FancyTimelinePage extends StatelessWidget {
                               ),
                             ),
                           )
-                          .values
-                          ,
+                          .values,
                       Container(
                         alignment: Alignment.center,
                         padding: const EdgeInsets.only(top: 16, bottom: 32),

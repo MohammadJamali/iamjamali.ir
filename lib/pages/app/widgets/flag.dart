@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:portfolio/main.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:portfolio/l10n/app_localizations.dart';
 
 class FlagButton extends StatelessWidget {
   const FlagButton({super.key, required this.languages});
@@ -94,7 +94,7 @@ class FlagButton extends StatelessWidget {
 
   _transitionBuilder() {
     if (kIsWeb) return null;
-    
+
     return (ctx, anim1, anim2, Widget tbChild) => FadeTransition(
           opacity: anim1,
           child: BackdropFilter(
